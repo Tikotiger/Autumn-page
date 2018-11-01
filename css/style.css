@@ -4,15 +4,12 @@
 	box-sizing: border-box;
 }
 
-
 body {
 	background: url(./../images/nat.jpg) no-repeat fixed;
 }
 
-
 /* header-place */
 /* header-place */
-
 
 header {
 	position: fixed;
@@ -25,14 +22,12 @@ header {
 	z-index: 999;
 }
 
-
 .header-center {
 	width: 70%;
 	height: 100%;
 	margin: 0px auto;
 	background-color: slateblue;
 }
-
 
 .header-center-menu {
 	width: 100%;
@@ -41,68 +36,63 @@ header {
 	list-style: none;
 }
 
-
 .header-menu-item {
 	position: relative;
+	display: inline-block;
 	width: 100px;
 	height: 100%;
-	display: inline-block;
 	line-height: 70px;
 	margin-right: 20px;
 	z-index: 0;
 	transition: all 0.5s ease;
 }
 
-
 .header-menu-item:after {
 	position: absolute;
 	content: "";
-	bottom: 0px;
-	left: 0px;
 	width: 100%;
 	height: 0px;
+	bottom: 0px;
+	left: 0px;
 	background-color: rgb(163, 166, 255);
 	z-index: -1;
 	transition: all 0.5s ease;
 }
 
-
 .header-menu-item:hover:after {
-	transition: all 0.5s ease;
-	top: 0px;
 	height: 100%;
+	top: 0px;
+	transition: all 0.5s ease;
 }
-
 
 .header-item-link {
 	display: block;
 	text-decoration: none;
-	color: white;
+	color: #fff;
 	font-size: 17px;
 	font-family: arial;
 	transition: all 0.5s ease;
 }
 
-
 .header-item-link:hover {
-	color: black;
 	font-size: 22px;
+	color: #000;
 	transition: all 0.5s ease;
 }
 
-
 /* header-place */
 /* header-place */
-
 
 .content {
 	width: 80%;
 	height: 1100px;
 	margin: 100px auto 30px;
 	background-color: silver;
+	border-radius: 10px;
+	border: 5px double black;
+	overflow: hidden;
 	opacity: .8;
 }
-
 
 .content-title {
 	width: 300px;
@@ -110,14 +100,13 @@ header {
 	margin: 0px auto;
 }
 
-
 .title-logo {
 	width: 100%;
 	height: 100%;
+	filter: drop-shadow(8px 8px 10px black);
 	border: 1px solid black;
 	border-radius: 50%;
 }
-
 
 .page-images {
 	width: 1000px;
@@ -126,26 +115,23 @@ header {
 	overflow: hidden;
 }
 
-
 .div-image {
+	float: left;
 	width: 320px;
 	height: 320px;
-	float: left;
 	margin: 0px 20px 20px 0px;
 }
-
 
 .div-image:nth-child(3n) {
 	margin-right: 0px;
 }
 
-
 .autumn-images {
 	width: 100%;
 	height: 100%;
+	filter: drop-shadow(8px 8px 10px black);
 	transition: all 0.7s ease;
 }
-
 
 .autumn-images:hover {
 	cursor: grab;
@@ -153,49 +139,43 @@ header {
 	transition: all 0.7s ease;
 }
 
-
 .div-anim {
+	float: left;
 	width: 320px;
 	height: 320px;
-	float: left;
 }
 
-
 .autumn-text {
-	text-align: center;
+	float: left;
 	width: 400px;
 	height: auto;
-	float: left;
+	text-align: center;
 	font-size: 18px;
 	text-transform: capitalize;
 	font-weight: bold;
 	font-family: italic;
 }
 
-
 .imganim {
 	width: 100%;
 	height: 100%;
 }
 
-
 .div-anim2 {
+	float: right;
 	width: 320px;
 	height: 320px;
-	float: right;
 }
-
 
 .under {
 	width: 100%;
 	height: 100px;
 	bottom: 0px;
-	overflow: hidden;
 	left: 0px;
+	overflow: hidden;
 	opacity: .7;
 	background-color: grey;
 }
-
 
 .under-div {
 	width: 70%;
@@ -204,12 +184,11 @@ header {
 	background-color: slateblue;
 }
 
-
 .footer-anim-div {
+	float: left;
 	width: 100px;
 	height: 100px;
 	text-align: center;
-	float: left;
 	margin: 0px 100px;
 	background-color: black;
 
@@ -221,21 +200,18 @@ header {
 	animation-timing-function: linear;
 }
 
-
 .footer-anim-div:hover {
 	animation-play-state: paused;
 	border-radius: 50%;
 }
-
 
 .anim-title {
 	line-height: 100px;
 	font-family: arial;
 	font-size: 17px;
 	font-style: italic;
-	color: white;
+	color: #fff;
 }
-
 
 @keyframes footer-anim {
 	0% {
@@ -248,3 +224,35 @@ header {
 		transform: rotate(360deg);
 	}
 }
+
+@media screen and (max-width: 880px) {
+	.header-center {
+		width: 100%;
+	}
+	.content {
+		overflow: auto;
+	}
+	.content-title {
+		width: 150px;
+		height: 100px;
+	}
+	.page-images {
+		width: 50%;
+	}
+}
+
+@media screen and (max-width: 620px) {
+	.page-images {
+		width: 100%;
+	}
+	.header-menu-item {
+		width: auto;
+	}
+	.header-item-link {
+		font-size: 12px;
+	}
+	.header-item-link:hover {
+		font-size: 16px;
+	}
+}
+
